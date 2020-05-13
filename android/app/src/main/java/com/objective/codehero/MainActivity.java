@@ -1,4 +1,4 @@
-package com.codehero;
+package com.objective.codehero;
 
 import com.facebook.react.ReactActivity;
 
