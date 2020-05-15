@@ -1,22 +1,21 @@
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import PropTypes from 'prop-types';
 
 import { Colors } from '../../assets';
 import { CharacterPropTypes } from '../../PropTypesHelper';
 
-const CharactersListItem = ({ item }) => {
-  return (
-    <TouchableOpacity onPress={() => {}} style={styles.wrapper}>
-      <Image
-        style={styles.image}
-        source={{
-          uri: `${item.thumbnail.path}.${item.thumbnail.extension}`,
-        }}
-      />
-      <Text style={styles.name}>{item.name}</Text>
-    </TouchableOpacity>
-  );
-};
+const CharactersListItem = ({ item, onPress }) => (
+  <TouchableOpacity onPress={onPress} style={styles.wrapper}>
+    <Image
+      style={styles.image}
+      source={{
+        uri: `${item.thumbnail.path}.${item.thumbnail.extension}`,
+      }}
+    />
+    <Text style={styles.name}>{item.name}</Text>
+  </TouchableOpacity>
+);
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -42,6 +41,7 @@ const styles = StyleSheet.create({
 
 CharactersListItem.propTypes = {
   item: CharacterPropTypes.isRequired,
+  onPress: PropTypes.func.isRequired,
 };
 
 export default CharactersListItem;
