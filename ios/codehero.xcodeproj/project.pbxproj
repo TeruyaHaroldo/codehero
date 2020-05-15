@@ -18,6 +18,10 @@
 		2DCD954D1E0B4F2C00145EB5 /* codeheroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* codeheroTests.m */; };
 		4D89BBC4E3138A9F14289460 /* libPods-codehero-codeheroTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6C490ED33C52B53432FF2B /* libPods-codehero-codeheroTests.a */; };
 		556EC9F2D09D0526A128B43C /* libPods-codehero-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2DFF2D5AFC3AEAC23AA44F /* libPods-codehero-tvOSTests.a */; };
+		5C8665F3246E3F270058765C /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C8665E7246E3F250058765C /* Roboto-Regular.ttf */; };
+		5C8665F5246E3F270058765C /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C8665E9246E3F260058765C /* Roboto-Bold.ttf */; };
+		5C8665F9246E3F270058765C /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C8665ED246E3F260058765C /* Roboto-Italic.ttf */; };
+		5C8665FA246E3F270058765C /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C8665EE246E3F260058765C /* Roboto-Light.ttf */; };
 		BFDCFE5A3AEE2B5217FF488A /* libPods-codehero-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E657D0AE918FA4C0789B1CC /* libPods-codehero-tvOS.a */; };
 		DD26D8E7993883DAD4FE3475 /* libPods-codehero.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB0651B53564D36B1F6D619 /* libPods-codehero.a */; };
 /* End PBXBuildFile section */
@@ -55,6 +59,10 @@
 		2D02E47B1E0B4A5D006451C7 /* codehero-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "codehero-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* codehero-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "codehero-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E657D0AE918FA4C0789B1CC /* libPods-codehero-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-codehero-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C8665E7246E3F250058765C /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		5C8665E9246E3F260058765C /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		5C8665ED246E3F260058765C /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		5C8665EE246E3F260058765C /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		64B2B6059BBF80046200B45F /* Pods-codehero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codehero.release.xcconfig"; path = "Target Support Files/Pods-codehero/Pods-codehero.release.xcconfig"; sourceTree = "<group>"; };
 		6BB0651B53564D36B1F6D619 /* libPods-codehero.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-codehero.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C6C490ED33C52B53432FF2B /* libPods-codehero-codeheroTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-codehero-codeheroTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +140,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				5C866600246E40000058765C /* Resources */,
 			);
 			name = codehero;
 			sourceTree = "<group>";
@@ -147,6 +156,17 @@
 				9C2DFF2D5AFC3AEAC23AA44F /* libPods-codehero-tvOSTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C866600246E40000058765C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C8665E9246E3F260058765C /* Roboto-Bold.ttf */,
+				5C8665ED246E3F260058765C /* Roboto-Italic.ttf */,
+				5C8665EE246E3F260058765C /* Roboto-Light.ttf */,
+				5C8665E7246E3F250058765C /* Roboto-Regular.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -339,6 +359,10 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				5C8665F3246E3F270058765C /* Roboto-Regular.ttf in Resources */,
+				5C8665F5246E3F270058765C /* Roboto-Bold.ttf in Resources */,
+				5C8665F9246E3F270058765C /* Roboto-Italic.ttf in Resources */,
+				5C8665FA246E3F270058765C /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +396,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		1BBFA1C432C6B00B5180A967 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

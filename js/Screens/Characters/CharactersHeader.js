@@ -7,10 +7,10 @@ const CharactersHeader = ({ style }) => {
   return (
     <View style={[styles.charactersHeaderWrapper, style]}>
       <View style={styles.textBordered}>
-        <Text style={styles.text}>BUSCA</Text>
+        <Text style={[styles.text, styles.textBold]}>BUSCA</Text>
       </View>
       <Text> </Text>
-      <Text style={styles.text}>MARVEL</Text>
+      <Text style={[styles.text, styles.textBold]}>MARVEL</Text>
       <Text> </Text>
       <Text style={styles.text}>TESTE FRONT-END</Text>
     </View>
@@ -29,6 +29,10 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     color: Colors.PRIMARY,
     fontSize: 16,
+    fontFamily: 'Roboto',
+  },
+  textBold: {
+    fontWeight: 'bold',
   },
 });
 

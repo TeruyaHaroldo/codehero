@@ -129,6 +129,7 @@ const styles = StyleSheet.create({
   indicatorNumber: {
     color: Colors.PRIMARY,
     fontSize: 16,
+    fontFamily: 'Roboto',
   },
   indicatorNumberActive: {
     color: Colors.WHITE,

@@ -199,6 +199,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     textAlign: 'center',
     color: Colors.GRAY,
+    fontFamily: 'Roboto',
   },
 });
 

@@ -13,7 +13,7 @@ const CharactersListItem = ({ item }) => {
           uri: `${item.thumbnail.path}.${item.thumbnail.extension}`,
         }}
       />
-      <Text>{item.name}</Text>
+      <Text style={styles.name}>{item.name}</Text>
     </TouchableOpacity>
   );
 };
@@ -28,11 +28,15 @@ const styles = StyleSheet.create({
     borderBottomColor: Colors.PRIMARY,
   },
   image: {
+    backgroundColor: Colors.DEFAULT_IMAGE_BACKGROUND,
     height: 58,
     width: 58,
     borderRadius: 29,
     marginRight: 25,
     marginLeft: 25,
+  },
+  name: {
+    fontFamily: 'Roboto',
   },
 });
 

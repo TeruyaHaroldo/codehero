@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     color: Colors.PRIMARY,
     fontSize: 16,
     marginBottom: 4,
+    fontFamily: 'Roboto',
   },
   textInput: {
     height: 40,
@@ -38,6 +39,7 @@ const styles = StyleSheet.create({
     paddingRight: 6,
     paddingLeft: 6,
     fontSize: 16,
+    fontFamily: 'Roboto',
   },
 });
 
