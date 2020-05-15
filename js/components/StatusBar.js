@@ -20,7 +20,7 @@ CustomStatusBar.propTypes = {
 };
 
 CustomStatusBar.defaultProps = {
-  backgroundColor: Colors.WHITE,
+  backgroundColor: Colors.DEFAULT_BACKGROUND,
   barStyle: 'dark-content',
 };
 
