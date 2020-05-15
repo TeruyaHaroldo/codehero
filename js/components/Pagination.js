@@ -37,12 +37,12 @@ Indicator.defaultProps = {
   number: null,
 };
 
-const Pagination = ({ page, charactersTotal, onChange }) => {
+const Pagination = ({ page, pageSize, charactersTotal, onChange }) => {
   if (charactersTotal <= 4) {
     return null;
   }
 
-  const totalNumberOfPages = Math.ceil(charactersTotal / 4);
+  const totalNumberOfPages = Math.ceil(charactersTotal / pageSize);
 
   let indicators = [];
   for (let i = 0; i < 3 && i < totalNumberOfPages; i++) {
@@ -51,7 +51,7 @@ const Pagination = ({ page, charactersTotal, onChange }) => {
         number: page + i,
         active: page + i === page,
       });
-    } else if (page === totalNumberOfPages && charactersTotal <= 8) {
+    } else if (page === totalNumberOfPages && charactersTotal <= pageSize * 2) {
       indicators.push({
         number: page + i - 1,
         active: page + i - 1 === page,
@@ -138,6 +138,7 @@ const styles = StyleSheet.create({
 
 Pagination.propTypes = {
   page: PropTypes.number.isRequired,
+  pageSize: PropTypes.number.isRequired,
   charactersTotal: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
 };
