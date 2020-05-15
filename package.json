@@ -4,16 +4,27 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android-release": "react-native run-android --variant=release",
+    "android-clean": "cd android && ./gradlew clean && cd ..",
     "ios": "react-native run-ios",
+    "ios-release": "react-native run-ios --configuration Release",
     "start": "react-native start",
+    "packager": "watchman watch-del-all && react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.3.0",
+    "@react-navigation/stack": "^5.3.3",
     "js-md5": "^0.7.3",
     "prop-types": "latest",
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.2",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-reanimated": "^1.8.0",
+    "react-native-safe-area-context": "^1.0.0",
+    "react-native-screens": "^2.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
