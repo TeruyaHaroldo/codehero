@@ -7,16 +7,16 @@ import {
   SafeAreaView,
   StyleSheet,
   Text,
-  TouchableOpacity,
 } from 'react-native';
 
 import { Colors, Images } from '../../assets';
+import { CharacterPropTypes } from '../../PropTypesHelper';
 import { Loading, Pagination, StatusBar } from '../../components';
 
 import CharactersHeader from './CharactersHeader';
 import CharactersSearch from './CharactersSearch';
 import CharactersListItem from './CharactersListItem';
-import { CharacterPropTypes } from '../../PropTypesHelper';
+import CharactersError from './CharactersError';
 
 const CharactersLayout = ({
   loading,
@@ -36,32 +36,7 @@ const CharactersLayout = ({
       <CharactersHeader style={styles.sectionWrapper} />
       {(() => {
         if (loadError) {
-          return (
-            <>
-              <Image
-                resizeMode="contain"
-                style={styles.image}
-                source={Images.ATTENTION}
-              />
-              <Text style={styles.message}>Falha na busca por heróis.</Text>
-              <TouchableOpacity
-                style={{
-                  backgroundColor: 'transparent',
-                  color: Colors.LINK,
-                }}
-                onPress={onLoad}
-              >
-                <Text
-                  style={{
-                    color: Colors.LINK,
-                    textAlign: 'center',
-                  }}
-                >
-                  Tentar Novamente
-                </Text>
-              </TouchableOpacity>
-            </>
-          );
+          return <CharactersError onPress={onLoad} />;
         }
 
         if (loading && characters.length > 0) {
