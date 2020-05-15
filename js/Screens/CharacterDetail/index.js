@@ -76,6 +76,8 @@ const styles = StyleSheet.create({
   characterName: {
     marginTop: 25,
     fontSize: 24,
+    textAlign: 'center',
+    paddingHorizontal: 25,
     fontFamily: 'Roboto',
   },
   listHeader: {
