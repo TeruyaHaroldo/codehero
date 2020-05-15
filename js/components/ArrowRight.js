@@ -10,6 +10,7 @@ const ArrowRight = ({ style, onPress, disabled }) => {
       style={[styles.arrowRightWrapper, style, disabled ? styles.disabled : {}]}
       activeOpacity={disabled ? 1 : 0.2}
       onPress={() => !disabled && onPress()}
+      hitSlop={{ top: 10, right: 10, bottom: 10, left: 10 }}
     />
   );
 };
