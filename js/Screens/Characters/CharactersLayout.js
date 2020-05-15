@@ -29,6 +29,7 @@ const CharactersLayout = ({
   onLoad,
   onChangePage,
   onChangeNameStartsWith,
+  onCharacterSelected,
 }) => {
   return (
     <SafeAreaView style={styles.screenWrapper}>
@@ -50,7 +51,12 @@ const CharactersLayout = ({
               <Text style={styles.listHeader}>Nome</Text>
               <FlatList
                 data={characters}
-                renderItem={({ item }) => <CharactersListItem item={item} />}
+                renderItem={({ item }) => (
+                  <CharactersListItem
+                    item={item}
+                    onPress={onCharacterSelected}
+                  />
+                )}
                 keyExtractor={(item) => item.id.toString()}
                 refreshControl={
                   <RefreshControl
@@ -118,7 +124,12 @@ const CharactersLayout = ({
             <Text style={styles.listHeader}>Nome</Text>
             <FlatList
               data={characters}
-              renderItem={({ item }) => <CharactersListItem item={item} />}
+              renderItem={({ item }) => (
+                <CharactersListItem
+                  item={item}
+                  onPress={() => onCharacterSelected(item)}
+                />
+              )}
               keyExtractor={(item) => item.id.toString()}
               refreshControl={
                 <RefreshControl
@@ -156,13 +167,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   listHeader: {
-    height: 37,
     fontSize: 16,
     lineHeight: 37,
-    alignItems: 'center',
     backgroundColor: Colors.PRIMARY,
     color: Colors.WHITE,
     paddingLeft: 108,
+    fontFamily: 'Roboto',
   },
   image: {
     height: 48,
@@ -189,6 +199,7 @@ CharactersLayout.propTypes = {
   onLoad: PropTypes.func.isRequired,
   onChangePage: PropTypes.func.isRequired,
   onChangeNameStartsWith: PropTypes.func.isRequired,
+  onCharacterSelected: PropTypes.func.isRequired,
 };
 
 CharactersLayout.defaultProps = {

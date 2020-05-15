@@ -86,6 +86,12 @@ class Characters extends Component {
     }, INPUT_TIMER);
   };
 
+  handleCharacterSelected = (character) => {
+    const { navigation } = this.props;
+
+    navigation.navigate('CharacterDetail', character);
+  };
+
   render() {
     const {
       loading,
@@ -108,6 +114,7 @@ class Characters extends Component {
         onLoad={this.handleLoad}
         onChangePage={this.handleChangePage}
         onChangeNameStartsWith={this.handleSearchByName}
+        onCharacterSelected={this.handleCharacterSelected}
       />
     );
   }
