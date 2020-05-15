@@ -1,6 +1,10 @@
 const Colors = {
-  WHITE: '#fff',
+  PRIMARY: '#d42026',
   DEFAULT_BACKGROUND: '#fff',
+  DEFAULT_BORDER: '#A5A5A5',
+  WHITE: '#fff',
+  GRAY: '#cbcbcb',
+  LINK: '#1890ff',
 };
 
 export default Colors;

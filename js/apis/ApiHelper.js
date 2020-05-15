@@ -1,14 +1,5 @@
 import md5 from 'js-md5';
 
-/**
- * Fetch protected resource's parsed JSON`s response
- * @param {string} method GET, POST, PATCH, DELETE, PUT...
- * @param {string} url
- * @param {object} urlParams ex `{ key: value }`, will be parsed into URL (GET params)
- * @param {object} body ex `{ key: value }`, will be stringified to JSON
- * @return {Promise} resolve(object of response) or reject (RequesError)
- */
-
 const PUBLIC_KEY = 'fdb7b34c43469388c938cb797654b37c';
 const PRIVATE_KEY = 'dc2ce55b29a64d812c3d5aea77f1b4552b054eee';
 
