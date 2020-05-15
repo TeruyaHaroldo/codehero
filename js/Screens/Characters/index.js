@@ -52,8 +52,6 @@ class Characters extends Component {
             loading: false,
             characters: response.data.results,
             charactersTotal: response.data.total,
-            page:
-              page > Math.ceil(response.data.charactersTotal / 4) ? 1 : page,
           });
         } catch (e) {
           this.setState({ loading: false, loadError: e, page: 1 });
@@ -71,7 +69,7 @@ class Characters extends Component {
 
     this.inputTimer = setTimeout(() => {
       this.inputTimer = null;
-      this.handleLoad();
+      this.setState({ page: 1 }, this.handleLoad);
     }, INPUT_TIMER);
   };
 
