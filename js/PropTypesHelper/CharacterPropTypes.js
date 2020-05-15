@@ -7,6 +7,20 @@ const CharacterPropTypes = PropTypes.shape({
   }),
   name: PropTypes.string,
   id: PropTypes.number,
+  series: PropTypes.shape({
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string,
+      })
+    ),
+  }),
+  events: PropTypes.shape({
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string,
+      })
+    ),
+  }),
 });
 
 export default CharacterPropTypes;
